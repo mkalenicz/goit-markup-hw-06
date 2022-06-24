@@ -676,7 +676,6 @@ footer {
   border-radius: 4px;
   width: 200px;
   height: 50px;
-  /* text-align: center; */
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -691,7 +690,6 @@ footer {
   background-repeat: no-repeat;
   background-size: 24px 24px;
   background-position: right 28px bottom 13px;
-  /* background-position: right; */
 }
 
 .newsletter-form-footer input {
@@ -755,11 +753,15 @@ img {
   margin-left: 40px;
   flex-direction: column;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .form-check-box-container {
-  display: inline;
+  margin-top: 25px;
   margin-bottom: 16px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .form-label-text {
@@ -780,7 +782,40 @@ img {
   font-size: 14px;
   line-height: 1.71;
   color: #757575;
-  display: inline;
+}
+
+.form-label-text-checkbox::before {
+  position: relative;
+  top: 3.5px;
+  margin-right: 7px;
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid #000000;
+}
+
+.modal-form-policy {
+  outline: 1px dashed green;
+}
+
+.modal-form-policy:checked + .form-label-text-checkbox::before {
+  background-color: #2196f3;
+  border: none;
+  background-image: url(../images/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .form-input-phone {
@@ -813,7 +848,7 @@ img {
   background-position: left 13.5px center;
 }
 
-.form-input-user {
+.form-input {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
@@ -822,11 +857,15 @@ img {
   font-family: inherit;
   font-size: 16px;
   outline: none;
-  background-image: url(../images/user-icon.svg);
-  /* background-image: url(../images/icons_form.svg#icon-user); */
-  background-repeat: no-repeat;
-  background-size: 12px 12px;
-  background-position: left 15px center;
+}
+
+.form-input-icon {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 15px;
+  left: 16px;
+  margin-top: 18px;
 }
 
 .form-input-textarea {
@@ -856,6 +895,7 @@ img {
   display: flex;
   margin-bottom: 40px;
 }
+
 .form-submit-btn {
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -875,6 +915,11 @@ img {
   justify-content: center;
 }
 
+.form-submit-btn:hover,
+.form-submit-btn:focus {
+  background-color: #1976d2;
+}
+
 .close-btn {
   position: absolute;
   background-color: #ffffff;
@@ -892,20 +937,16 @@ img {
   color: #2196f3;
 }
 
-.form-label:focus-within {
-  color: #2196f3;
+.form-modal .form-input:focus-within {
+  border: 1px solid #2196f3;
 }
 
-.form-input-user:focus-within {
-  background-image: url(../images/user-icon-blue.svg);
+.form-modal .form-input-textarea:focus-within {
+  border: 1px solid #2196f3;
 }
 
-.form-input-phone:focus-within {
-  background-image: url(../images/phone-icon-blue.svg);
-}
-
-.form-input-mail:focus-within {
-  background-image: url(../images/mail-icon-blue.svg);
+.form-modal .form-label:focus-within {
+  fill: #2196f3;
 }
 
 .icon-modal {

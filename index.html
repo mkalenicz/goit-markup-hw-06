@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zadanie domowe nr 5 z kursu GO-IT" />
-    <title>Kurs GO-IT - Zadanie domowe nr 5</title>
+    <meta name="description" content="Zadanie domowe nr 6 z kursu GO-IT" />
+    <title>Kurs GO-IT - Zadanie domowe nr 6</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -394,7 +394,12 @@
             <form name="newsletter_signup_form" autocomplete="on" novalidate>
               <label>
                 <p>ZAPISZ SIĘ DO NEWSLETTERA</p>
-                <input class="input-newsletter-mail" type="email" name="email" placeholder="E-mail" />
+                <input
+                  class="input-newsletter-mail"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                />
               </label>
 
               <button type="submit">Zapisz się</button>
@@ -416,22 +421,44 @@
         <form class="form-modal" name="form-modal" autocomplete="on" validate>
           <label class="form-label">
             <span class="form-label-text">Imię</span>
-            <input class="form-input-user" type="text" name="name" minlength="3" required/>
+            <svg class="form-input-icon">
+              <use href="./images/icons.svg#icon-user"></use>
+            </svg>
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              minlength="3"
+              required
+            />
           </label>
 
           <label class="form-label">
             <span class="form-label-text">Telefon</span>
-            <input class="form-input-phone" type="tel" name="phone_number" pattern="[+]{1}[0-9]{11,14}" required/>
+            <svg class="form-input-icon">
+              <use href="./images/icons.svg#phone-icon"></use>
+            </svg>
+            <input
+              class="form-input"
+              type="tel"
+              name="phone_number"
+              pattern="[+]{1}[0-9]{11,14}"
+              required
+            />
           </label>
 
           <label class="form-label">
             <span class="form-label-text">Email</span>
-            <input class="form-input-mail" type="email" name="email"required/>
-          </label class="form-label">
+            <svg class="form-input-icon">
+              <use href="./images/icons.svg#mail-icon-form"></use>
+            </svg>
+            <input class="form-input" type="email" name="email" required />
+          </label>
 
           <label class="form-label">
             <span class="form-label-text">Komentarz</span>
-            <textarea class="form-input-textarea"
+            <textarea
+              class="form-input-textarea"
               name="feedback"
               rows="5"
               placeholder="Wprowadź tekst"
@@ -439,13 +466,25 @@
             ></textarea>
 
             <label class="form-check-box-container">
-              <input type="checkbox" name="accept_rules" value="true"  required/>
-              <span class="form-label-text-checkbox">Oświadczam iż akceptuję <span class="link-modal"><a>Regulamin</a></span> i <span class="link-modal"><a>Politykę Prywatności.</a></span></span>
-             
+              <input
+                class="modal-form-policy visually-hidden"
+                type="checkbox"
+                name="accept_rules"
+                value="true"
+                required
+              />
+              <span class="form-label-text-checkbox"
+                >Oświadczam iż akceptuję
+                <span class="link-modal"><a>Regulamin</a></span> i
+                <span class="link-modal"
+                  ><a>Politykę Prywatności.</a></span
+                ></span
+              >
             </label>
           </label>
-<div class="btn-form-wrapper"><button class="form-submit-btn" type="submit">Wyślij</button></div>
-          
+          <div class="btn-form-wrapper">
+            <button class="form-submit-btn" type="submit">Wyślij</button>
+          </div>
         </form>
       </div>
     </div>
